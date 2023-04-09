@@ -195,7 +195,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ### The Result 3:
 
-** git status says the the branch is diverged at this point. And it suggests to merge.**
+**'git status' says the the branch is diverged at this point. And it suggests to merge.**
 
 `$ git push`  
 To github.com:kamrulcodes/git-pull-test-1.git  
@@ -208,7 +208,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 ### The Result 4:
 
-**If the current branch is behind it's remote counterpart that means if someone else updates the remote, the git push is rejected. So, no worries here too.**  
+**If the current branch is behind it's remote counterpart, that means if someone else updates the remote branch, the git push is rejected. So, no worries of unwanted push too.**  
 
 `$ git pull`  
 hint: You have divergent branches and need to specify how to reconcile them.  
@@ -246,12 +246,12 @@ You must edit all merge conflicts and then
 mark them as resolved using git add 👈️  
 
 `$ git status`  
-interactive rebase in progress; onto b214564  
+interactive rebase in progress; onto b214564 👈️  
 Last command done (1 command done):  
    pick 156d6ee One added and one modified. modified:   A file to stage.txt new file:   A new file - staged for the first time.txt  
 No commands remaining.  
 You are currently rebasing branch 'main' on 'b214564'.  
-  (fix conflicts and then run "git rebase --continue")  
+  (fix conflicts and then run "git rebase --continue") 👈️  
   (use "git rebase --skip" to skip this patch)  
   (use "git rebase --abort" to check out the original branch)  
 
@@ -271,7 +271,7 @@ Untracked files:
 `$ git add 'A file to stage.txt'`  
 
 `$ git status`  
-interactive rebase in progress; onto b214564  
+interactive rebase in progress; onto b214564 👈️  
 Last command done (1 command done):  
    pick 156d6ee One added and one modified. modified:   A file to stage.txt new file:   A new file - staged for the first time.txt
 No commands remaining.  
