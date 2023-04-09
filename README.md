@@ -1,7 +1,11 @@
 # git-pull-test-1
-Git test - Checking git pull effects on local files  
+### Git test - Checking git pull effects on local files.  
 
-**Do not create a 'read me' file automatically this time.
+**Note:** If you do not create a 'read me' file in Github, then there will be no 'innitial commit' in the remote origin.
+
+`$ mkdir git-pull-test-1`
+
+`$ cd git-pull-test-1`  
 
 `$ git init`  
 Initialized empty Git repository in /home/kamrul/Projects/git-pull-test-1/.git/  
@@ -17,7 +21,7 @@ Initialized empty Git repository in /home/kamrul/Projects/git-pull-test-1/.git/
  1 file changed, 0 insertions(+), 0 deletions(-)  
  create mode 100644 A file to stage.txt  
 
-`$ git push`
+`$ git push`  
 fatal: The current branch main has no upstream branch. 👈️  
 To push the current branch and set the remote as upstream, use  
 
@@ -58,7 +62,12 @@ no changes added to commit (use "git add" and/or "git commit -a")
 [main b214564] Edited - 'A file to stage.txt'  
  1 file changed, 2 insertions(+)  
 
-`$ git push`
+**Note:**  
+
+    Commit messages should be more specific and in present form.  
+    Like, "Add one line of text in the file 'A file to stage.txt'" or, "fix something in the file ..." etc.
+
+`$ git push`  
 Enumerating objects: 5, done.  
 Counting objects: 100% (5/5), done.  
 Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.  
@@ -83,7 +92,7 @@ Date:   Sun Apr 9 03:20:31 2023 +0600
 Unstaged changes after reset:  
 M	A file to stage.txt  
 
-`$ git status`
+`$ git status`  
 On branch main  
 Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.  
   (use "git pull" to update your local branch)  
