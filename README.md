@@ -373,4 +373,31 @@ Date:   Sun Apr 9 06:15:25 2023 +0600
 
 **So, we can test the pull effect now. Because, we already have new commits (README.md file) in the remote origin/main branch.**  
 
+### The Result 8:  
+
+**'git status' or 'git log' do not confirm the state of the remote origin.  
+'git fetch' or 'git pull' is essential for that.**  
+
 `$ git pull`  
+remote: Enumerating objects: 17, done.  
+remote: Counting objects: 100% (17/17), done.  
+remote: Compressing objects: 100% (15/15), done.  
+remote: Total 15 (delta 10), reused 0 (delta 0), pack-reused 0  
+Unpacking objects: 100% (15/15), 4.28 KiB | 199.00 KiB/s, done.  
+From github.com:kamrulcodes/git-pull-test-1  
+   5263638..712d5a6  main       -> origin/main  
+Updating 5263638..712d5a6  
+Fast-forward  
+ README.md | 78 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------  
+ 1 file changed, 59 insertions(+), 19 deletions(-)  
+
+### The Result 9:  
+
+**'git pull' has no effect on new file (A) what so ever.**  
+
+**Conclution:**  
+
+- 'git pull' has no effect on local Untracked (U) files.
+- 'git pull' has no effect on local New (A) files.
+- 'git pull' aborts if there is any Modified (M) file in the local branch.
+- 'git status' or 'git log' do not reveal any information about the remote branch. 
