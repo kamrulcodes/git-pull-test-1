@@ -110,7 +110,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 `$ git add 'A file to stage.txt'`  
 
-`$ git status`
+`$ git status`  
 On branch main  
 Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.  
   (use "git pull" to update your local branch) 👈️  
@@ -158,17 +158,16 @@ error: Your local changes to the following files would be overwritten by merge: 
 Please commit your changes or stash them before you merge. 👈️  
 Aborting  👈️  
 
-### The Result 1:
 
-**Locally modified (M) files abort. And asked to stash or, commit. No worries.**  
-
-`$ git pull --rebase`
-error: cannot pull with rebase: Your index contains uncommitted changes.  
+`$ git pull --rebase`  
+error: cannot pull with rebase: Your index contains uncommitted changes.  👈️  
 error: please commit or stash them.  
 
-### The Result 2:
+### The Result 1:
 
-**We can not pull and rebase without commit/stash.**
+**If there is a modified (M) file exists in the local branch, the 'git pull' aborts.  
+And asks to *stash* or, *commit* before pulling. So, No worries. Local modified (M) files do not affected by a sudden pull request.**  
+**It is also not possible to 'pull --rebase' without commit/stash.**
 
 `$ git commit`  
 [main 156d6ee] One added and one modified.  
@@ -176,6 +175,11 @@ modified: A file to stage.txt
 new file: A new file - staged for the first time.txt  
  2 files changed, 4 insertions(+)  
  create mode 100644 A new file - staged for the first time.txt  
+
+### The Result 2:
+
+**'git commit' commits both the modified (M) and staged (A) files.  
+Here, we fail to test the effect of pull on the staged (A) file.**  
 
 `$ git status`  
 On branch main  
