@@ -352,7 +352,24 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 `$ git add 'A new file - not staged.txt'`  
 
+`$ git status`  
+On branch main  
+Your branch is up to date with 'origin/main'. ( ❌️ can not be correct or reliable status.)  
+
+Changes to be committed:  
+  (use "git restore --staged <file>..." to unstage)  
+        new file:   A new file - not staged.txt  
+
+Untracked files:  
+  (use "git add <file>..." to include in what will be committed)  
+        A file not to stage.txt  
+
 `$ git log`  
+commit 526363841305cc6761e14bb5b25f055bfcf566f6 (HEAD -> main, origin/main) ( ❌️ NOT Correct. Local HEAD is behind origin/main.)  
+Author: Kamrul Hasan <********@gmail.com>  
+Date:   Sun Apr 9 06:15:25 2023 +0600  
+
+    Create README.md  
 
 **So, we can test the pull effect now. Because, we already have new commits (README.md file) in the remote origin/main branch.**  
 
