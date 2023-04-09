@@ -346,4 +346,14 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ### The Result 7:
 
-**Untracked (U) files remains the same - no matter what. Staged(A) and Modified (M) files are needed to be commited.** 
+**Untracked (U) files remain the same - no matter what.**  
+
+**Now, let's add the untracked file 'A new file - not staged.txt' to test the pull effect on staged (A) files.**
+
+`$ git add 'A new file - not staged.txt'`  
+
+`$ git log`  
+
+**So, we can test the pull effect now. Because, we already have new commits (README.md file) in the remote origin/main branch.**  
+
+`$ git pull`  
